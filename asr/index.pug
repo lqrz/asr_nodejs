@@ -1,0 +1,42 @@
+html
+	head
+		doctype html
+		title= title
+
+		// FONT
+		link(href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css")
+
+		script(src="https://code.jquery.com/jquery-1.10.2.js")
+
+		// CSS
+		link(rel="stylesheet" href="css/normalize.css")
+		link(rel="stylesheet" href="css/skeleton.css")
+		link(rel="stylesheet" href="css/custom.css")
+
+		// script(src="//www.WebRTC-Experiment.com/RecordRTC.js")
+
+		script(type="text/javascript")
+			include public/js/mic.js
+
+		script(type="text/javascript")
+			include public/js/recorder.js
+
+	body
+		div(class='header')
+			h1 Nederlands Automatic Speech Recognition
+
+		div(class='content')
+			div(class='container')
+				div(class='row')
+					div(class='five columns')
+						div(class='row')
+							input(type="text" name="audio_path" id="audio_path" placeholder="Audio destination path" value="")
+
+						div(class='row')
+							input(type="text" name="decoder_script_path" id="decoder_script_path" placeholder="Decoder path" value="")
+
+						div(class='row')
+							img(src="imgs/mic.png" id="record_image")
+
+					div(class='seven columns')
+						textarea(type="text" name="output_translation" id="output_translation" value="")
